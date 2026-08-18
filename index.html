@@ -1,1 +1,536 @@
-<p>Hello, World!!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <title>Blaze Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+
+      <div class="brand">
+        <div class="brand-icon">
+          B
+        </div>
+
+        <div class="brand-text">
+          <div class="brand-name">
+            Blaze
+          </div>
+
+          <div class="brand-subtitle">
+            Admin
+          </div>
+        </div>
+      </div>
+
+      <button class="mobile-close" id="mobileClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+    </div>
+
+
+    <div class="sidebar-label">
+      MANAGEMENT
+    </div>
+
+
+    <!-- Generated automatically from app.js -->
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+
+
+    <div class="sidebar-bottom">
+
+      <div class="sidebar-divider"></div>
+
+      <button class="user-card">
+
+        <div class="user-avatar">
+          MC
+        </div>
+
+        <div class="user-info">
+
+          <div class="user-name">
+            Marcus
+          </div>
+
+          <div class="user-role">
+            Administrator
+          </div>
+
+        </div>
+
+        <i class="fa-solid fa-ellipsis user-more"></i>
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- MAIN AREA -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+      <div class="topbar-left">
+
+        <button class="mobile-menu" id="mobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div>
+
+          <h1 id="pageTitle">
+            Dashboard
+          </h1>
+
+          <div class="page-description" id="pageDescription">
+            Everything happening at Blaze.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="topbar-actions">
+
+        <a
+          href="https://blazechurch.org"
+          target="_blank"
+          class="view-site-btn"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+          <span>
+            View Website
+          </span>
+        </a>
+
+
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- PAGE CONTENT -->
+    <div class="content">
+
+      <section id="dashboardPage" class="page active">
+
+        <div class="welcome-row">
+
+          <div>
+            <h2>
+              Blaze Admin
+            </h2>
+
+            <p>
+              Manage the church website, media, events and more from one place.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <!-- QUICK ACTIONS -->
+        <div class="section-heading">
+
+          <div>
+            <h3>
+              Quick Actions
+            </h3>
+
+            <p>
+              Jump into the things you use most.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+          <button
+            class="quick-card"
+            data-page="website"
+          >
+
+            <div class="quick-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <div class="quick-content">
+
+              <h4>
+                Edit Website
+              </h4>
+
+              <p>
+                Update content across blazechurch.org
+              </p>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+          </button>
+
+
+          <button
+            class="quick-card"
+            data-page="sermons"
+          >
+
+            <div class="quick-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="quick-content">
+
+              <h4>
+                Sermons
+              </h4>
+
+              <p>
+                Manage messages and service media
+              </p>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+          </button>
+
+
+          <button
+            class="quick-card"
+            data-page="events"
+          >
+
+            <div class="quick-icon">
+              <i class="fa-solid fa-calendar"></i>
+            </div>
+
+            <div class="quick-content">
+
+              <h4>
+                Events
+              </h4>
+
+              <p>
+                Add or update upcoming events
+              </p>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+          </button>
+
+
+          <button
+            class="quick-card"
+            data-page="media"
+          >
+
+            <div class="quick-icon">
+              <i class="fa-solid fa-images"></i>
+            </div>
+
+            <div class="quick-content">
+
+              <h4>
+                Media
+              </h4>
+
+              <p>
+                Upload images, graphics and files
+              </p>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+          </button>
+
+        </div>
+
+
+
+        <!-- STATUS -->
+        <div class="section-heading status-heading">
+
+          <div>
+            <h3>
+              System
+            </h3>
+
+            <p>
+              Blaze digital services.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="status-grid">
+
+          <div class="status-card">
+
+            <div>
+
+              <div class="status-title">
+                Website
+              </div>
+
+              <div class="status-description">
+                blazechurch.org
+              </div>
+
+            </div>
+
+            <div class="status-online">
+              <span></span>
+              Online
+            </div>
+
+          </div>
+
+
+          <div class="status-card">
+
+            <div>
+
+              <div class="status-title">
+                Live
+              </div>
+
+              <div class="status-description">
+                blazechurch.org/live
+              </div>
+
+            </div>
+
+            <div class="status-online">
+              <span></span>
+              Ready
+            </div>
+
+          </div>
+
+
+          <div class="status-card">
+
+            <div>
+
+              <div class="status-title">
+                Admin Console
+              </div>
+
+              <div class="status-description">
+                admin.blazechurch.org
+              </div>
+
+            </div>
+
+            <div class="status-online">
+              <span></span>
+              Online
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- WEBSITE PAGE -->
+      <section id="websitePage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+
+          <h2>
+            Website
+          </h2>
+
+          <p>
+            Website controls will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- SERMONS PAGE -->
+      <section id="sermonsPage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-play"></i>
+          </div>
+
+          <h2>
+            Sermons
+          </h2>
+
+          <p>
+            Sermon management will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- EVENTS PAGE -->
+      <section id="eventsPage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+
+          <h2>
+            Events
+          </h2>
+
+          <p>
+            Event management will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- MEDIA PAGE -->
+      <section id="mediaPage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-images"></i>
+          </div>
+
+          <h2>
+            Media
+          </h2>
+
+          <p>
+            Images, graphics and files will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- PEOPLE PAGE -->
+      <section id="peoplePage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+
+          <h2>
+            People
+          </h2>
+
+          <p>
+            User and team management will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- SETTINGS PAGE -->
+      <section id="settingsPage" class="page">
+
+        <div class="placeholder">
+
+          <div class="placeholder-icon">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+
+          <h2>
+            Settings
+          </h2>
+
+          <p>
+            Admin settings will live here.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
